@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let a = 2;
+        let x = 1 + (a *= 2);
+        console.log(x);
+        /*
+        Первым вычислится выражение в скобках, так как выше приоритет, *= это
+        оператор умножения с присваиванием, так как "а" уже было равно 2, то 2 * 2
+        получим 4, и присвоим это число в переменную "а"
+        Далее 1 + 4 получим 5, и присвоим это число в переменную "х"
+        */
+
+    </script>
+</body>
+
+</html>

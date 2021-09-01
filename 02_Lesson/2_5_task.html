@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let a = parseInt(prompt("Введите первое число"));
+        let b = parseInt(prompt("Введите второе число"));
+        let oper = prompt("Введите операцию");
+
+        function summ(a, b) {
+            return a + b;
+        }
+
+        function difference(a, b) {
+            return a - b;
+        }
+
+        function division(a, b) {
+            return a / b;
+        }
+
+        function multiplication(a, b) {
+            return a * b;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return summ(arg1, arg2);
+                case "-":
+                    return difference(arg1, arg2);
+                case "/":
+                    return division(arg1, arg2);
+                case "*":
+                    return multiplication(arg1, arg2);
+                default:
+                    alert("вы ввели не корректное значение");
+            }
+        }
+        alert(mathOperation(a, b, oper));
+
+        //Вариант 2, с проверкой валидации.
+        /*
+        function valid(arg1, arg2, operation) {
+            let a = parseInt(prompt("Введите первое число"));
+            let b = parseInt(prompt("Введите второе число"));
+            let oper = prompt("Введите операцию");
+            var operations = ['+', '-', '*', '/'];
+
+            if (a === "" || b === "") {
+                alert("Вы ничего не ввели");
+                valid();
+                }
+
+            if (a === null || b === null) {
+                alert("вы нажали отмена");
+                valid();
+                }
+
+            a = Number(a);
+            b = Number(b);
+            if (isNaN(a) || isNaN(b)) {
+                alert("вы ввели не корректное значение");
+                valid();
+                }
+
+            if (operations.indexOf(oper) == -1) {
+                alert("Вы ввели неверную операцию");
+                valid();
+                }
+            return a, b, oper;
+            }
+
+        valid();
+        */
+
+    </script>
+</body>
+
+</html>
