@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function Mobile_phone(brand, model) {
+            this.brand = brand;
+            this.model = model;
+        }
+
+        Mobile_phone.prototype.send_sms = function (message) {
+            alert(message);
+        };
+
+        Mobile_phone.prototype.show_info = function () {
+            alert(this.brand + ' ' + this.model + ' ' + this.color);
+        };
+
+        Mobile_phone.prototype.color = 'green';
+
+        let mobile1 = new Mobile_phone('Motorolla', 'C-380');
+        mobile1.send_sms('Sending text');
+        mobile1.show_info();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class Mobile_phone {
+            constructor(brand, model) {
+                this.brand = brand;
+                this.model = model;
+            }
+
+            send_sms(message) {
+                alert(message);
+            }
+            show_info() {
+                alert(this.brand + ' ' + this.model + ' ' + this.color);
+            }
+            color = 'green';
+        }
+
+        class Smart_phone extends Mobile_phone {
+            constructor(brand, model, camera) {
+                super(brand, model);
+                this.camera = camera;
+            }
+
+            send_mms(message_mms) {
+                alert(message_mms);
+            }
+        }
+
+        let smart1 = new Smart_phone('Motorolla', 'C-380', '12mpx');
+        smart1.send_sms('Sending text');
+        smart1.send_mms('Sending mms');
+        smart1.show_info();
+    </script>
+</body>
+
+</html>
